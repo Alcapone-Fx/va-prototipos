@@ -5,7 +5,7 @@ Tres versiones de la página de inicio para elegir dirección de diseño. HTML/C
 | Versión | Archivo | Idea |
 |---|---|---|
 | 1 Vibrante | `home-vibrante.html` | Moderno y llamativo: carrusel, ondas moradas, acentos dorados |
-| 2 Bento | `home-bento.html` | "De un vistazo": bloques de color y foto con horarios, mapa, camp, prédica y contacto a la vista |
+| 2 Editorial | `home-editorial.html` | Luminoso y fotográfico: fondo claro, fotos a sangre, titulares serif, una idea por pantalla |
 | 3 Series | `home-series.html` | Contenido por series, material descargable y agenda, con tono de atardecer |
 
 - **Cambiar de versión:** botones "Diseño 1 · 2 · 3" abajo al centro (o teclas 1, 2, 3).

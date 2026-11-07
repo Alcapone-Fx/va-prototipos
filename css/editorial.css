@@ -1,0 +1,166 @@
+/* Versión 2 · Editorial luminoso: claro, fotografía a sangre, titulares serif, una idea por pantalla */
+:root{--paper:#FBFAF7;--ink:#17141C;--stone:#F0ECE4;--line:#E0DACD;--brand:#4E1D92;--muted:#655f70;--serif:'Fraunces',Georgia,'Times New Roman',serif}
+body{background:var(--paper);color:var(--ink);font-size:18px;line-height:1.65}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.025em}
+.wrap{width:min(1180px,100% - 2.4rem);margin-inline:auto}
+.eyebrow{display:block;font:700 .76rem/1 'Montserrat',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:1.1rem}
+.h2{font-size:clamp(2.3rem,5.4vw,4.3rem);line-height:1.02;margin:0 0 1.2rem}
+.lead{font-size:1.2rem;color:var(--muted);max-width:34rem}
+.sec{padding:clamp(4.5rem,9vw,8.5rem) 0}
+.sec.alt{background:var(--stone)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-brand{background:var(--brand);color:#fff}
+.btn-gold{background:var(--gold);color:#241638}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(6px)}
+.textlink{font-weight:700;text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px}
+.textlink:hover{color:var(--brand)}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+/* Encabezado */
+.hd{position:fixed;inset:0 0 auto 0;z-index:60;color:#fff;transition:background .3s,color .3s,box-shadow .3s}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:78px}
+.hd .logo-p{display:none}
+.hd img{height:44px;width:auto}
+.hd.solid{background:rgba(251,250,247,.92);backdrop-filter:blur(14px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.hd.solid .logo-w{display:none}.hd.solid .logo-p{display:block}
+.nav{display:flex;align-items:center;gap:.2rem}
+.nav a{text-decoration:none;font-weight:600;font-size:.95rem;padding:.6rem .85rem;border-radius:999px;opacity:.95}
+.nav a:hover{background:rgba(127,127,127,.18)}
+.nav .live{background:var(--gold);color:#241638;margin-left:.4rem;opacity:1;display:inline-flex;align-items:center;gap:.5rem;font-weight:700}
+.nav .live::before{content:"";width:8px;height:8px;border-radius:50%;background:#e5283b}
+.lang{background:transparent;color:inherit;border:1.5px solid currentColor;border-radius:999px;padding:.45rem .8rem;font:700 .78rem 'Montserrat';cursor:pointer;min-height:40px;margin-left:.3rem;opacity:.85}
+.menu-btn{background:transparent;color:inherit;border:1.5px solid currentColor;border-radius:999px;height:44px;padding:0 1.1rem;align-items:center;font:700 .92rem 'Montserrat';cursor:pointer}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,10,20,.72) 0,rgba(14,10,20,.25) 62%,rgba(14,10,20,.05)),linear-gradient(0deg,rgba(14,10,20,.78),transparent 46%)}
+.hero .wrap{padding-bottom:2.2rem;padding-top:7rem}
+.hero h1{font-size:clamp(3.2rem,10vw,8.4rem);line-height:.94;letter-spacing:-.04em;margin:0 0 1.4rem;max-width:11ch}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold)}
+.hero p{font-size:clamp(1.1rem,2.2vw,1.45rem);max-width:30rem;margin:0 0 1.8rem;opacity:.95}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.hero .btn{min-height:56px;padding-inline:1.8rem}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.35)}
+.facts small{display:block;font:700 .7rem 'Montserrat';letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-bottom:.2rem}
+.facts b{font-weight:600;font-size:1.05rem}
+
+/* Horarios */
+.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.rows{border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:8.5rem 1fr auto;gap:1rem;align-items:baseline;padding:1.5rem 0;border-top:1px solid var(--line)}
+.row .d{font:700 .8rem 'Montserrat';letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+.row .w{color:var(--muted)}
+.row .t{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.3rem);font-weight:600;letter-spacing:-.02em;text-align:right}
+.note{font-size:.9rem;color:var(--muted);margin-top:1rem}
+
+/* Valores: foto + lista */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:min(86vh,820px)}
+.split .ph{position:relative;min-height:380px}
+.split .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.split .tx{display:flex;flex-direction:column;justify-content:center;padding:clamp(2.5rem,7vw,6rem);background:var(--stone)}
+.vals{list-style:none;margin:1.5rem 0 0;padding:0;counter-reset:v}
+.vals li{counter-increment:v;display:grid;grid-template-columns:3.2rem 1fr;gap:.5rem 1rem;padding:1.3rem 0;border-top:1px solid var(--line)}
+.vals li::before{content:"0" counter(v);font-family:var(--serif);font-size:1.5rem;color:var(--brand)}
+.vals b{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:600;letter-spacing:-.02em;line-height:1.1;display:block}
+.vals span{color:var(--muted);grid-column:2}
+
+/* Mensajes */
+.msgs{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);margin-top:2.5rem}
+.feat{position:relative;display:block;border-radius:22px;overflow:hidden;aspect-ratio:16/10;color:#fff;text-decoration:none;isolation:isolate;background:#111}
+.feat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s}
+.feat:hover img{transform:scale(1.04)}
+.feat::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(14,10,20,.85),transparent 55%)}
+.feat .in{position:absolute;left:1.6rem;right:1.6rem;bottom:1.4rem}
+.feat small{font:700 .72rem 'Montserrat';letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.feat h3{font-size:clamp(1.7rem,3.4vw,2.6rem);margin:.3rem 0 0;line-height:1.05}
+.play{position:absolute;top:1.3rem;left:1.3rem;width:64px;height:64px;border-radius:50%;background:var(--gold);color:#241638;display:grid;place-items:center;font-size:1.3rem;box-shadow:0 0 0 10px rgba(255,200,61,.3)}
+.mlist{list-style:none;margin:0;padding:0;align-self:start}
+.mlist li{border-top:1px solid var(--line)}
+.mlist a{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:1.15rem 0;text-decoration:none}
+.mlist b{font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1.15}
+.mlist small{display:block;color:var(--muted);font-size:.88rem}
+.mlist a:hover b{color:var(--brand)}
+.mlist .ar{font-size:1.3rem;transition:transform .25s}
+.mlist a:hover .ar{transform:translateX(5px)}
+.serie-card{display:flex;gap:1rem;align-items:center;margin-top:1.4rem;padding:1rem;border-radius:18px;background:#fff;border:1px solid var(--line);text-decoration:none}
+.serie-card img{width:84px;border-radius:10px;flex:none}
+.serie-card b{font-family:var(--serif);font-size:1.2rem;line-height:1.1;display:block}
+.serie-card small{color:var(--muted)}
+
+/* Eventos */
+.evt{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,6vw,6rem);align-items:center;margin-top:2.5rem}
+.evt .poster img{width:100%;border-radius:22px;box-shadow:0 30px 60px rgba(23,20,28,.22);display:block}
+.evt h3{font-size:clamp(2rem,4.4vw,3.4rem);line-height:1;margin:0 0 1rem}
+.facts2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem 2rem;margin:1.2rem 0 1.8rem;padding:1.4rem 0;border-block:1px solid var(--line)}
+.facts2 small{display:block;font:700 .7rem 'Montserrat';letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+.facts2 b{font-weight:600}
+.elist{list-style:none;margin:2.2rem 0 0;padding:0}
+.elist li{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:1rem 0;border-top:1px solid var(--line);align-items:baseline}
+.elist b{font:700 .8rem 'Montserrat';letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}
+
+/* Banda de misión */
+.band{position:relative;min-height:78vh;display:grid;place-items:center;text-align:center;color:#fff;isolation:isolate;overflow:hidden}
+.band img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;object-position:center 35%}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(14,10,20,.58)}
+.band h2{font-size:clamp(2.8rem,9vw,7.5rem);line-height:.95;margin:0 0 1.2rem;letter-spacing:-.04em}
+.band h2 em{font-style:italic;font-weight:500;color:var(--gold)}
+.band p{max-width:32rem;margin:0 auto 1.8rem;font-size:1.2rem;opacity:.95}
+
+/* Ministerios */
+.idx{margin-top:2.5rem;border-bottom:1px solid var(--line)}
+.idx a{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.15rem 0;border-top:1px solid var(--line);text-decoration:none;font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,4.6vw,3.3rem);letter-spacing:-.025em;line-height:1.05;transition:padding .3s,color .3s}
+.idx a span{font-family:'Montserrat';font-size:.9rem;font-weight:500;letter-spacing:0;color:var(--muted);text-align:right}
+.idx a:hover{padding-left:1.2rem;color:var(--brand)}
+
+/* Primera vez + material */
+.steps{list-style:none;margin:1.5rem 0 0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.1rem 0;border-top:1px solid var(--line);align-items:baseline}
+.steps li::before{content:counter(s);font-family:var(--serif);font-size:2rem;color:var(--brand);line-height:1}
+.pdfs{list-style:none;margin:1.5rem 0 0;padding:0}
+.pdfs a{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;padding:1.05rem 0;border-top:1px solid var(--line);text-decoration:none}
+.pdfs .ic{width:44px;height:44px;border-radius:10px;background:var(--brand);color:#fff;display:grid;place-items:center;font:800 .72rem 'Montserrat'}
+.pdfs b{display:block;line-height:1.25}
+.pdfs small{color:var(--muted)}
+.pdfs .dl{font-weight:700;color:var(--brand);font-size:.9rem}
+.pdfs a:hover b{color:var(--brand)}
+
+/* Visítanos */
+.visit{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,5vw,5rem);align-items:stretch}
+.visit dl{margin:1.5rem 0 1.8rem}
+.visit dt{font:700 .72rem 'Montserrat';letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-top:1.2rem}
+.visit dd{margin:.2rem 0 0;font-size:1.12rem}
+.visit .map{border-radius:22px;min-height:420px;height:100%;filter:saturate(.8)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:3rem}
+.card{padding:2rem;border-radius:22px;background:#fff;border:1px solid var(--line)}
+.card.ink{background:var(--ink);color:#fff;border-color:var(--ink)}
+.card h3{font-size:1.9rem;margin:0 0 .5rem}
+.card p{margin:0 0 1.2rem;color:var(--muted)}
+.card.ink p{color:rgba(255,255,255,.75)}
+
+footer{background:var(--ink);color:#fff;padding:4rem 0 7rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-end}
+footer img{height:54px}
+footer p{margin:.2rem 0;opacity:.65;font-size:.9rem}
+
+@media(max-width:960px){
+  .two,.split,.msgs,.evt,.visit,.cards{grid-template-columns:1fr}
+  .split .ph{min-height:420px}
+  .facts{grid-template-columns:1fr;gap:.9rem}
+  .row{grid-template-columns:7rem 1fr}.row .t{grid-column:2;text-align:left}
+  .evt .poster{max-width:420px}
+}
+@media(max-width:760px){
+  .nav{position:absolute;left:0;right:0;top:100%;background:var(--paper);color:var(--ink);flex-direction:column;align-items:stretch;padding:.6rem 1.2rem 1.4rem;display:none;border-bottom:1px solid var(--line);box-shadow:0 24px 40px rgba(23,20,28,.15)}
+  .nav.open{display:flex}
+  .nav a{padding:1rem .2rem;font-size:1.15rem;border-bottom:1px solid var(--line);border-radius:0}
+  .nav .live{margin:.8rem 0 0;justify-content:center;border-radius:999px;border:0}
+  .nav .lang{align-self:flex-start;margin:.8rem 0 0;color:var(--ink)}
+  .hero .wrap{padding-top:6rem}
+  .idx a span{display:none}
+  .facts2{grid-template-columns:1fr}
+}
