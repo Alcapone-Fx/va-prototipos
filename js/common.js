@@ -3,8 +3,7 @@
   var VERSIONS = [
     ['atrevido', '1', 'Atrevido'],
     ['editorial', '2', 'Editorial'],
-    ['series', '3', 'Series'],
-    ['mosaico', '4', 'Mosaico']
+    ['series', '3', 'Series']
   ];
   var cur = document.body.dataset.version;
   try { localStorage.setItem('va-version', cur); } catch (e) {}

@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0e0a19">
+<meta name="theme-color" content="#0B0716">
 <title>Iglesia Vida Abundante · Versión 3 Series</title>
 <link rel="icon" href="assets/monograma-blanco.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/series.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body data-version="series">
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -18,114 +19,265 @@
 <header class="top" id="inicio">
   <div class="container">
     <a href="#inicio" aria-label="Iglesia Vida Abundante, inicio"><img src="assets/logo-blanco.png" alt="Iglesia Vida Abundante" width="210" height="65"></a>
-    <button class="menu-btn" aria-expanded="false" aria-label="Abrir menú">☰</button>
+    <button class="menu-btn" aria-expanded="false" aria-label="Abrir menú">Menú</button>
     <nav class="nav" data-nav aria-label="Principal">
-      <a href="#series" data-en="Series">Series</a>
-      <a href="#material" data-en="Study material">Material de estudio</a>
-      <a href="#agenda" data-en="Events">Eventos</a>
+      <a href="#domingo" data-en="Schedule">Horarios</a>
+      <a href="#series" data-en="Messages">Mensajes</a>
+      <a href="#eventos" data-en="Events">Eventos</a>
       <a href="#ministerios" data-en="Ministries">Ministerios</a>
       <a href="#visitanos" data-en="Visit us">Visítanos</a>
       <button class="lang" data-lang-toggle type="button">EN</button>
+      <a class="new" href="#domingo" data-en="I'm new">Soy nuevo</a>
     </nav>
   </div>
 </header>
 
 <main id="contenido">
-<section class="hero" aria-label="Serie actual">
-  <div class="container">
-    <span class="tag" data-en="Current series">Serie actual</span>
-    <h1>Viviendo en los últimos días</h1>
-    <p data-en="Messages to stay awake, prepared and full of hope. New message every Sunday.">Mensajes para estar despiertos, preparados y llenos de esperanza. Un mensaje nuevo cada domingo.</p>
-    <div class="btns"><a class="btn btn-gold" href="https://www.youtube.com/" target="_blank" rel="noopener" data-en="Watch the latest message">Ver el último mensaje</a><a class="btn btn-out" href="#material" data-en="Study notes">Notas y estudio</a></div>
+
+<section class="stage" id="carrusel" role="region" aria-roledescription="carrusel" aria-label="Destacados">
+  <div class="slide on" aria-label="1 de 3">
+    <img class="bg" src="assets/fotos/pastor.jpg" alt="" width="2048" height="1365">
+    <div class="container">
+      <div class="txt">
+        <span class="tag" data-en="Current series">Serie actual</span>
+        <h1>Viviendo en los <em>últimos días</em></h1>
+        <p class="lead" data-en="Messages to stay awake, prepared and full of hope. A new message every Sunday.">Mensajes para estar despiertos, preparados y llenos de esperanza. Un mensaje nuevo cada domingo.</p>
+        <div class="btns"><a class="btn btn-gold" href="https://www.youtube.com/" target="_blank" rel="noopener" data-en="Watch the latest message">Ver el último mensaje</a><a class="btn btn-out" href="#series" data-en="All series">Todas las series</a></div>
+      </div>
+      <div class="art"><img src="assets/fotos/serie-ultimos-dias.jpg" alt="Afiche de la serie Viviendo en los últimos días" width="640" height="992"></div>
+    </div>
+  </div>
+
+  <div class="slide" aria-label="2 de 3">
+    <img class="bg blur" src="assets/fotos/camp.jpg" alt="" width="1408" height="1760">
+    <div class="container">
+      <div class="txt">
+        <span class="tag">13 al 15 de noviembre</span>
+        <h1>Código <em>Santo</em> Camp</h1>
+        <p class="lead">Tres días de campamento juvenil en Palabra de Vida (Cangrejera). Reserva tu cupo con $20.</p>
+        <div class="btns"><a class="btn btn-gold" href="#eventos">Ver los detalles</a></div>
+      </div>
+      <div class="art"><img src="assets/fotos/camp.jpg" alt="Afiche del Código Santo Camp 2026" width="704" height="880"></div>
+    </div>
+  </div>
+
+  <div class="slide" aria-label="3 de 3">
+    <img class="bg" src="assets/fotos/congregacion.jpg" alt="" width="2048" height="1365">
+    <div class="container">
+      <div class="txt">
+        <span class="tag" data-en="First time?">¿Primera vez?</span>
+        <h1>Hay un lugar <em>para ti</em></h1>
+        <p class="lead" data-en="Joy, worship and fellowship. Come as you are; we will welcome you at the door.">Alegría, adoración y compañerismo. Ven como estás: te recibimos en la puerta.</p>
+        <div class="btns"><a class="btn btn-gold" href="#domingo" data-en="Plan your visit">Planifica tu visita</a><a class="btn btn-out" href="#visitanos" data-en="How to get here">Cómo llegar</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ctl">
+    <div class="container">
+      <button class="arr" data-prev aria-label="Anterior">←</button>
+      <div class="dots" role="tablist" aria-label="Elegir destacado">
+        <button class="dot" aria-current="true" aria-label="Serie actual"><i></i><span>Serie</span></button>
+        <button class="dot" aria-label="Código Santo Camp"><i></i><span>Camp</span></button>
+        <button class="dot" aria-label="Primera vez"><i></i><span>Primera vez</span></button>
+      </div>
+      <button class="arr" data-next aria-label="Siguiente">→</button>
+      <button class="arr" data-pause aria-label="Pausar carrusel" aria-pressed="false">❚❚</button>
+    </div>
   </div>
 </section>
 
-<section class="sec" id="series">
+<nav class="quick" aria-label="Accesos rápidos">
   <div class="container">
-    <div class="sh"><h2 data-en="Message series">Series de mensajes</h2><a href="#">Ver todas →</a></div>
-    <div class="rail" tabindex="0" aria-label="Series de mensajes">
-      <a class="serie s1" href="#"><small>Serie actual</small><h3>Viviendo en los últimos días</h3><span>Señales que no ignorar · 8 nov</span></a>
-      <a class="serie s2" href="#"><small>Estudio bíblico</small><h3>Cristología</h3><span>Miércoles · 6:00 pm</span></a>
-      <a class="serie s3" href="#"><small>Campamento juvenil</small><h3>Código Santo</h3><span>13 – 15 nov · $50 / $56</span></a>
-      <a class="serie s4" href="#"><small>Radio</small><h3>Desafío para la Vida</h3><span>435 episodios · L–V 6:15 am</span></a>
+    <ul>
+      <li><a href="#domingo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 12 0v1M19 8v6M16 11h6"/></svg><span><b data-en="I'm new">Soy nuevo</b><small>Qué esperar</small></span></a></li>
+      <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></svg><span><b data-en="Watch live">Ver en vivo</b><small>Domingos</small></span></a></li>
+      <li><a href="#domingo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b data-en="Schedule">Horarios</b><small>Esta semana</small></span></a></li>
+      <li><a href="#visitanos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></svg><span><b data-en="Give">Dar</b><small>Ofrendas</small></span></a></li>
+      <li><a href="#visitanos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg><span><b data-en="Prayer">Oración</b><small>Pídenos oración</small></span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="sec light" id="domingo">
+  <div class="container">
+    <div class="sun">
+      <div class="rv">
+        <span class="eyebrow" data-en="This Sunday">Este domingo</span>
+        <p class="big">7:00 y 10:30 am</p>
+        <address>29 Av. Nte. #1215, Col. Buenos Aires II,<br>San Salvador · 2235 9566</address>
+        <div class="btns"><a class="btn btn-pur" href="https://www.google.com/maps/search/?api=1&amp;query=29+Av+Nte+1215+San+Salvador" target="_blank" rel="noopener" data-en="How to get here">Cómo llegar</a><a class="btn btn-out" href="#">WhatsApp</a></div>
+      </div>
+      <div class="rv">
+        <ul class="sched">
+          <li><b>Domingo</b><span>Culto dominical</span><span>7:00 · 10:30 am</span></li>
+          <li><b>Martes</b><span>Oración y estudio</span><span>6:00 pm</span></li>
+          <li><b>Miércoles</b><span>Estudio bíblico</span><span>6:00 pm</span></li>
+          <li><b>Sábado</b><span>Culto de jóvenes</span><span>4:00 pm</span></li>
+        </ul>
+        <p class="note">Horarios provisionales, por confirmar.</p>
+      </div>
+    </div>
+    <ol class="steps rv">
+      <li>Llega 10 minutos antes y te recibimos en la puerta.</li>
+      <li>Ven como te sientas cómodo: aquí lo importante eres tú.</li>
+      <li>Ministerio de niños disponible <i>(por confirmar)</i>.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="mensaje">
+  <div class="container latest">
+    <a class="thumb rv" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Ver la última prédica en YouTube"><img src="assets/fotos/pastor.jpg" alt="El pastor predicando" loading="lazy" width="2048" height="1365"><span class="play" aria-hidden="true">▶</span></a>
+    <div class="rv">
+      <span class="eyebrow" data-en="Latest message">Último mensaje</span>
+      <h2>Señales que no ignorar</h2>
+      <p class="meta">Serie Viviendo en los últimos días · Domingo 8 de noviembre</p>
+      <div class="btns"><a class="btn btn-gold" href="#">Ver video</a><a class="btn btn-out" href="#">Escuchar</a><a class="btn btn-out" href="#">Bosquejo PDF</a></div>
+      <ul class="prev">
+        <li><a href="#">Preparados para el retorno <small>1 de noviembre</small></a></li>
+        <li><a href="#">Desafío para la Vida · Ep. 435 <small>Radio</small></a></li>
+        <li><a href="#">Semana de Intercesión Misionera <small>2 al 6 de nov</small></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="series">
+  <div class="container">
+    <div class="sh rv"><div><span class="eyebrow">Mensajes</span><h2 class="h2" data-en="Message series">Series de mensajes</h2></div><a class="more" href="#">Ver todas →</a></div>
+    <div class="rail rv" tabindex="0" aria-label="Series de mensajes">
+      <a class="sr" href="#"><div class="cover"><img src="assets/fotos/serie-ultimos-dias.jpg" alt="" loading="lazy" width="640" height="992"></div><h3>Viviendo en los últimos días</h3><span>Serie actual · Domingos</span></a>
+      <a class="sr" href="#"><div class="cover type" style="--c1:#4E1D92;--c2:#1b0a3a"><small>Estudio bíblico</small><b>Cristo<br>logía</b></div><h3>Cristología</h3><span>Miércoles · 6:00 pm</span></a>
+      <a class="sr" href="#"><div class="cover"><img src="assets/fotos/camp.jpg" alt="" loading="lazy" width="704" height="880"></div><h3>Código Santo</h3><span>Campamento · 13–15 nov</span></a>
+      <a class="sr" href="#"><div class="cover type" style="--c1:#9534A7;--c2:#3a0f5c"><small>Radio</small><b>Desafío para la vida</b></div><h3>Desafío para la Vida</h3><span>435 episodios · L–V 6:15 am</span></a>
+      <a class="sr" href="#"><div class="cover type" style="--c1:#c9871a;--c2:#5a2b00"><small>Intercesión</small><b>Semana misionera</b></div><h3>Intercesión Misionera</h3><span>2 al 6 de noviembre</span></a>
     </div>
   </div>
 </section>
 
 <section class="sec" id="material">
-  <div class="container two">
-    <div class="panel">
-      <h3 data-en="Notes of the message">Notas del mensaje</h3>
-      <p style="opacity:.8;margin:.3rem 0 0">Bosquejos con versículos y guía para tu grupo pequeño. Se actualizan cada semana.</p>
-      <div class="res">
-        <a href="#"><span class="ic">PDF</span><span><b>Bosquejo · Señales que no ignorar</b><small>Domingo 8 de noviembre</small></span><span class="dl">Descargar</span></a>
-        <a href="#"><span class="ic">PDF</span><span><b>Estudio para grupos · Preparados para el retorno</b><small>Semana del 1 de noviembre</small></span><span class="dl">Descargar</span></a>
-        <a href="#"><span class="ic">PDF</span><span><b>Guía · La humanidad de Cristo</b><small>Estudio bíblico</small></span><span class="dl">Descargar</span></a>
-      </div>
-    </div>
-    <div class="panel">
-      <h3>Llévalo en el celular</h3>
-      <div class="qr">
-        <svg viewBox="0 0 21 21" aria-label="Código QR de ejemplo" role="img"><path fill="#14082b" d="M0 0h7v7H0zM14 0h7v7h-7zM0 14h7v7H0zM2 2h3v3H2zM16 2h3v3h-3zM2 16h3v3H2zM9 0h2v2H9zM9 4h4v1H9zM8 8h2v2H8zM11 9h3v2h-3zM15 8h2v2h-2zM18 9h3v2h-3zM9 12h2v3H9zM12 13h3v2h-3zM16 12h2v2h-2zM19 14h2v2h-2zM8 17h3v2H8zM13 17h2v4h-2zM17 17h3v2h-3zM9 20h2v1H9z"/></svg>
-        <p style="margin:0">Escanea el QR del boletín y abre las notas del mensaje de esta semana. <small style="opacity:.7">(QR de ejemplo.)</small></p>
-      </div>
-      <div class="btns"><a class="btn btn-out" href="#">Sección niños y jóvenes</a></div>
+  <div class="container">
+    <div class="sh rv"><div><span class="eyebrow" data-en="Study material">Material de estudio</span><h2 class="h2">Bosquejos y guías</h2></div></div>
+    <div class="res rv">
+      <a href="#"><span class="ic">PDF</span><b>Bosquejo · Señales que no ignorar</b><small>Domingo 8 de noviembre</small><span class="dl">Descargar ↓</span></a>
+      <a href="#"><span class="ic">PDF</span><b>Estudio para grupos · Preparados para el retorno</b><small>Semana del 1 de noviembre</small><span class="dl">Descargar ↓</span></a>
+      <a href="#"><span class="ic">PDF</span><b>Guía · La humanidad de Cristo</b><small>Estudio bíblico</small><span class="dl">Descargar ↓</span></a>
     </div>
   </div>
 </section>
 
-<section class="sec" id="agenda">
-  <div class="container two">
-    <div>
-      <div class="sh"><h2 data-en="This week">Esta semana</h2><a href="#">Calendario →</a></div>
-      <div class="agenda">
-        <div class="ag"><div class="dt"><b>Dom</b><span>7:00 · 10:30</span></div><div><h3>Culto dominical</h3><p>Adoración y mensaje de la serie</p></div><span class="chip">Iglesia</span></div>
-        <div class="ag"><div class="dt"><b>Mar</b><span>6:00 pm</span></div><div><h3>Oración y estudio</h3><p>Estudio del mensaje del domingo</p></div><span class="chip">Iglesia</span></div>
-        <div class="ag"><div class="dt"><b>Mié</b><span>6:00 pm</span></div><div><h3>Estudio bíblico</h3><p>Cristología: La humanidad de Cristo</p></div><span class="chip">Iglesia</span></div>
-        <div class="ag"><div class="dt"><b>Sáb</b><span>4:00 pm</span></div><div><h3>Culto de jóvenes</h3><p>Worship juvenil</p></div><span class="chip">Jóvenes</span></div>
-        <div class="ag"><div class="dt"><b>13–15</b><span>nov</span></div><div><h3>Código Santo Camp 2026</h3><p>Camp con hospedaje y transporte · $50 / $56</p></div><span class="chip">Camp</span></div>
-      </div>
-    </div>
-    <div>
-      <div class="sh"><h2 data-en="Our activities">Lo que hemos vivido</h2><a href="#">Galerías →</a></div>
-      <div class="panel">
-        <div class="gal"><img src="assets/fotos/congregacion.jpg" alt="Hermana adorando" loading="lazy" width="600" height="400"><img src="assets/fotos/tarima-oracion.jpg" alt="Equipo orando en la tarima" loading="lazy" width="600" height="400"><img src="assets/fotos/adoracion-mayor.jpg" alt="Hermano en oración" loading="lazy" width="600" height="400"></div>
-        <h3>Semana de Intercesión Misionera</h3>
-        <p style="opacity:.8">Del 2 al 6 de noviembre oramos por las naciones. Mira el reporte de la semana y las fotos.</p>
-        <div class="btns" style="margin-top:.5rem"><a class="btn btn-out" href="#">Ver reporte y fotos</a></div>
-      </div>
+<section class="sec alt" id="eventos">
+  <div class="container ev">
+    <a class="poster rv" href="#" aria-label="Código Santo Camp 2026"><img src="assets/fotos/camp.jpg" alt="Afiche del Código Santo Camp 2026" loading="lazy" width="704" height="880"></a>
+    <div class="rv">
+      <span class="eyebrow" data-en="Events">Eventos</span>
+      <h2 class="h2">Lo que viene</h2>
+      <ul class="agenda">
+        <li><div class="date"><b>13</b><span>Nov</span></div><div><h3>Código Santo Camp 2026</h3><div class="facts"><span>13 al 15 de noviembre</span><span>Palabra de Vida (Cangrejera)</span><span>$50 sin camiseta · $56 con camiseta</span></div><a class="btn btn-gold" href="#">Reserva tu cupo con $20</a></div></li>
+        <li><div class="date"><b>Mié</b><span>6 pm</span></div><div><h3>Estudio bíblico de Cristología</h3><p>Todos los miércoles.</p></div></li>
+        <li><div class="date"><b>Dom</b><span>7 · 10:30</span></div><div><h3>Serie “Viviendo en los últimos días”</h3><p>Culto dominical, 7:00 y 10:30 am.</p></div></li>
+        <li><div class="date"><b>L–V</b><span>6:15 am</span></div><div><h3>Desafío para la Vida</h3><p>Programa radial diario.</p></div></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <section class="sec" id="ministerios">
   <div class="container">
-    <div class="sh"><h2 data-en="Ministries">Ministerios</h2></div>
-    <div class="tags"><a href="#">Niños</a><a href="#">Jóvenes</a><a href="#">Discipulado de mujeres</a><a href="#">Discipulado de hombres</a><a href="#">Grupos Pámpano</a><a href="#">Intercesión</a><a href="#">Alabanza</a></div>
+    <div class="sh rv"><div><span class="eyebrow" data-en="Ministries">Ministerios</span><h2 class="h2">Un lugar para cada etapa</h2></div></div>
+    <div class="min rv">
+      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg><h3>Niños</h3><p>Los pequeños también adoran.</p></a>
+      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3>Jóvenes</h3><p>Worship juvenil · sábados 4:00 pm.</p></a>
+      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></svg><h3>Mujeres</h3><p>Discipulado de mujeres.</p></a>
+      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><h3>Hombres</h3><p>Discipulado de hombres.</p></a>
+      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15M5 19l8-8"/></svg><h3>Grupos Pámpano</h3><p>Crece en comunidad.</p></a>
+      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/></svg><h3>Intercesión</h3><p>Oramos por ti.</p></a>
+    </div>
   </div>
 </section>
 
-<section class="sec" id="visitanos">
-  <div class="container visit">
-    <div class="panel">
-      <h3 data-en="Visit us">Visítanos</h3>
-      <dl><dt>Cultos del domingo</dt><dd>7:00 am y 10:30 am</dd>
-      <dt>Dirección</dt><dd>29 Av. Nte. #1215, Col. Buenos Aires II, dos cuadras al poniente del redondel de la Fuente Luminosa, San Salvador</dd>
-      <dt>Teléfono</dt><dd>2235 9566</dd>
-      <dt>Ofrendas</dt><dd>Transferencia: banco y cuenta <i>por confirmar</i></dd></dl>
-      <div class="btns"><a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=29+Av+Nte+1215+San+Salvador" target="_blank" rel="noopener">Cómo llegar</a><a class="btn btn-out" href="#">Pedir oración</a></div>
+<section class="sec alt" id="visitanos">
+  <div class="container">
+    <div class="visit">
+      <div class="rv">
+        <span class="eyebrow" data-en="Visit us">Visítanos</span>
+        <h2 class="h2">Te esperamos</h2>
+        <dl>
+          <dt>Cultos del domingo</dt><dd>7:00 am y 10:30 am</dd>
+          <dt>Dirección</dt><dd>29 Av. Nte. #1215, Col. Buenos Aires II, dos cuadras al poniente del redondel de la Fuente Luminosa, San Salvador</dd>
+          <dt>Teléfono</dt><dd>2235 9566</dd>
+          <dt>Correo</dt><dd><i>Por definir</i></dd>
+        </dl>
+        <div class="btns"><a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=29+Av+Nte+1215+San+Salvador" target="_blank" rel="noopener" data-en="How to get here">Cómo llegar</a><a class="btn btn-out" href="#">WhatsApp</a></div>
+      </div>
+      <iframe class="rv" title="Mapa de la iglesia" loading="lazy" src="https://maps.google.com/maps?q=29+Av+Nte+1215+San+Salvador+El+Salvador&amp;output=embed"></iframe>
     </div>
-    <iframe class="map" title="Mapa de la iglesia" loading="lazy" src="https://maps.google.com/maps?q=29+Av+Nte+1215+San+Salvador+El+Salvador&output=embed"></iframe>
+    <div class="give rv">
+      <div><span class="eyebrow">Ofrendas</span><h3>Siembra en la obra</h3><p>Transferencia bancaria. Banco y cuenta: <i>por confirmar</i>.</p><a class="btn btn-gold" href="#">Ver datos de la cuenta</a></div>
+      <div><span class="eyebrow">Oración</span><h3>Pide oración</h3><p>Tu petición llega al grupo de intercesión y es privada.</p><a class="btn btn-out" href="#">Enviar petición</a></div>
+    </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <img src="assets/logo-blanco.png" alt="Iglesia Vida Abundante" width="190" height="59">
-  <p>Iglesia Vida Abundante de las Asambleas de Dios · San Salvador, El Salvador</p>
-  <p>Prototipo de diseño · contenido provisional</p>
+  <div class="container">
+    <div><img src="assets/logo-blanco.png" alt="Iglesia Vida Abundante" width="200" height="62"></div>
+    <div><p>Iglesia Vida Abundante de las Asambleas de Dios · San Salvador · 2235 9566</p><p>Prototipo de diseño, contenido provisional</p></div>
+  </div>
 </footer>
 
+<script>
+(function(){
+  var top=document.querySelector('.top');
+  function sc(){top.classList.toggle('solid',scrollY>40)} sc(); addEventListener('scroll',sc,{passive:true});
+
+  /* Reveal */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+
+  /* Carrusel */
+  var stage=document.getElementById('carrusel'),
+      slides=[].slice.call(stage.querySelectorAll('.slide')),
+      dots=[].slice.call(stage.querySelectorAll('.dot')),
+      pauseBtn=stage.querySelector('[data-pause]'),
+      DUR=7000, i=0, timer=null, paused=matchMedia('(prefers-reduced-motion: reduce)').matches, hover=false;
+  stage.style.setProperty('--dur',DUR+'ms');
+  function go(n){
+    i=(n+slides.length)%slides.length;
+    slides.forEach(function(s,k){s.classList.toggle('on',k===i)});
+    dots.forEach(function(d,k){
+      d.setAttribute('aria-current',k===i);
+      var b=d.querySelector('i'); b.style.animation='none'; void b.offsetWidth; b.style.animation='';
+    });
+    arm();
+  }
+  function arm(){
+    clearTimeout(timer);
+    stage.classList.toggle('paused',paused||hover);
+    if(!paused&&!hover) timer=setTimeout(function(){go(i+1)},DUR);
+  }
+  stage.querySelector('[data-next]').addEventListener('click',function(){go(i+1)});
+  stage.querySelector('[data-prev]').addEventListener('click',function(){go(i-1)});
+  dots.forEach(function(d,k){d.addEventListener('click',function(){go(k)})});
+  pauseBtn.addEventListener('click',function(){
+    paused=!paused; pauseBtn.setAttribute('aria-pressed',paused);
+    pauseBtn.textContent=paused?'▶':'❚❚'; pauseBtn.setAttribute('aria-label',paused?'Reanudar carrusel':'Pausar carrusel');
+    if(paused){clearTimeout(timer);stage.classList.add('paused')} else go(i);
+  });
+  stage.addEventListener('mouseenter',function(){hover=true;clearTimeout(timer);stage.classList.add('paused')});
+  stage.addEventListener('mouseleave',function(){hover=false;go(i)});
+  var x0=null;
+  stage.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  stage.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)go(i+(dx<0?1:-1));x0=null});
+  if(paused){pauseBtn.textContent='▶';pauseBtn.setAttribute('aria-pressed','true');stage.classList.add('paused')}
+  go(0);
+})();
+</script>
 <script src="js/common.js"></script>
 </body>
 </html>
