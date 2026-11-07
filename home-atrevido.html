@@ -8,7 +8,7 @@
 <title>Iglesia Vida Abundante · Versión 1 Atrevido</title>
 <link rel="icon" href="assets/monograma-blanco.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Montserrat:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/atrevido.css">
 <script>document.documentElement.classList.add('js')</script>
@@ -60,11 +60,12 @@
   <div class="wrap">
     <span class="tag" data-en="Schedule">Horarios</span>
     <h2 class="big" style="font-size:clamp(3rem,9.5vw,8rem)">¿Cuándo <span style="color:var(--purple)">nos vemos</span>?</h2>
-    <div class="sched rv">
-      <div class="r"><div><span class="d">Domingo</span><small>Culto dominical</small></div><span class="t">7:00 · 10:30 am</span></div>
-      <div class="r"><div><span class="d">Martes</span><small>Oración y estudio</small></div><span class="t">6:00 pm</span></div>
-      <div class="r"><div><span class="d">Miércoles</span><small>Estudio bíblico</small></div><span class="t">6:00 pm</span></div>
-      <div class="r"><div><span class="d">Sábado</span><small>Culto de jóvenes</small></div><span class="t">4:00 pm</span></div>
+    <p class="nextpill rv"><i aria-hidden="true"></i><span id="next-at">Próxima reunión: domingo · 7:00 am</span></p>
+    <div class="sched rv" id="sched">
+      <div class="r" data-day="0"><div><span class="d">Domingo</span><small>Culto dominical</small></div><span class="t">7:00 · 10:30 am</span></div>
+      <div class="r" data-day="2"><div><span class="d">Martes</span><small>Oración y estudio</small></div><span class="t">6:00 pm</span></div>
+      <div class="r" data-day="3"><div><span class="d">Miércoles</span><small>Estudio bíblico</small></div><span class="t">6:00 pm</span></div>
+      <div class="r" data-day="6"><div><span class="d">Sábado</span><small>Culto de jóvenes</small></div><span class="t">4:00 pm</span></div>
     </div>
     <p class="note">Horarios provisionales, por confirmar.</p>
   </div>
@@ -97,9 +98,9 @@
       </a>
       <div class="rv">
         <ul class="mlist">
-          <li><a href="#"><span><b>Preparados para el retorno</b><small>Domingo 1 de noviembre</small></span><span class="ar" aria-hidden="true">→</span></a></li>
-          <li><a href="#"><span><b>Desafío para la Vida · Ep. 435</b><small>Programa radial · L–V 6:15 am</small></span><span class="ar" aria-hidden="true">→</span></a></li>
-          <li><a href="#"><span><b>Semana de Intercesión Misionera</b><small>Del 2 al 6 de noviembre</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+          <li><a href="#"><span class="db"><b>01</b>nov</span><span><b>Preparados para el retorno</b><small>Domingo 1 de noviembre</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+          <li><a href="#"><span class="db alt"><b>L–V</b>radio</span><span><b>Desafío para la Vida · Ep. 435</b><small>Programa radial · 6:15 am</small></span><span class="ar" aria-hidden="true">→</span></a></li>
+          <li><a href="#"><span class="db"><b>02</b>nov</span><span><b>Semana de Intercesión Misionera</b><small>Del 2 al 6 de noviembre</small></span><span class="ar" aria-hidden="true">→</span></a></li>
         </ul>
         <a class="serie" href="#"><img src="assets/fotos/serie-ultimos-dias.jpg" alt="Afiche de la serie" loading="lazy" width="152" height="236"><span><small>Serie actual</small><b>Viviendo en los últimos días</b></span></a>
       </div>
@@ -109,7 +110,7 @@
 
 <section class="blk evt" id="eventos">
   <div class="wrap">
-    <a class="poster rv" href="#"><img src="assets/fotos/camp.jpg" alt="Afiche del Código Santo Camp 2026" loading="lazy" width="1280" height="1600"></a>
+    <a class="poster rv" href="#"><img src="assets/fotos/camp.jpg" alt="Afiche del Código Santo Camp 2026" loading="lazy" width="1280" height="1600"><span class="count" id="count" hidden><small>Faltan</small><b>6</b><span>días</span></span></a>
     <div class="rv">
       <span class="tag" data-en="Next event">Próximo evento</span>
       <h2 class="big">13—15 <span class="out">nov</span></h2>
@@ -134,25 +135,30 @@
     <span class="tag" data-en="Ministries">Ministerios</span>
     <h2 class="big rv">Un lugar para <em>cada etapa</em></h2>
     <div class="mgrid2">
-      <a class="mn c1 rv" href="#"><b>Niños</b><span>Los pequeños también adoran</span><span class="go" aria-hidden="true">↗</span></a>
-      <a class="mn c2 rv" href="#"><b>Jóvenes</b><span>Worship juvenil · sábados 4:00 pm</span><span class="go" aria-hidden="true">↗</span></a>
-      <a class="mn c3 rv" href="#"><b>Mujeres</b><span>Discipulado de mujeres</span><span class="go" aria-hidden="true">↗</span></a>
-      <a class="mn c4 rv" href="#"><b>Hombres</b><span>Discipulado de hombres</span><span class="go" aria-hidden="true">↗</span></a>
-      <a class="mn c5 rv" href="#"><b>Pámpano</b><span>Grupos para crecer en comunidad</span><span class="go" aria-hidden="true">↗</span></a>
-      <a class="mn c6 rv" href="#"><b>Intercesión</b><span>Oramos por ti</span><span class="go" aria-hidden="true">↗</span></a>
+      <a class="mn c1 rv" href="#"><i class="sh" aria-hidden="true"></i><b>Niños</b><span>Los pequeños también adoran</span><span class="go" aria-hidden="true">↗</span></a>
+      <a class="mn c2 rv" href="#"><i class="sh" aria-hidden="true"></i><img src="assets/fotos/congregacion.jpg" alt="" loading="lazy" width="2048" height="1365"><b>Jóvenes</b><span>Worship juvenil · sábados 4:00 pm</span><span class="go" aria-hidden="true">↗</span></a>
+      <a class="mn c3 rv" href="#"><i class="sh" aria-hidden="true"></i><img src="assets/fotos/mujeres-oracion.jpg" alt="" loading="lazy" width="2048" height="1365"><b>Mujeres</b><span>Discipulado de mujeres</span><span class="go" aria-hidden="true">↗</span></a>
+      <a class="mn c4 rv" href="#"><i class="sh" aria-hidden="true"></i><b>Hombres</b><span>Discipulado de hombres</span><span class="go" aria-hidden="true">↗</span></a>
+      <a class="mn c5 rv" href="#"><i class="sh" aria-hidden="true"></i><img src="assets/fotos/adoracion-mayor.jpg" alt="" loading="lazy" width="2048" height="1365"><b>Pámpano</b><span>Grupos para crecer en comunidad</span><span class="go" aria-hidden="true">↗</span></a>
+      <a class="mn c6 rv" href="#"><i class="sh" aria-hidden="true"></i><img src="assets/fotos/tarima-oracion.jpg" alt="" loading="lazy" width="2048" height="1365"><b>Intercesión</b><span>Oramos por ti</span><span class="go" aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
+
+<div class="marq purple" aria-hidden="true"><div class="tr rev">
+  <span>Ven como estás<i>✦</i>Hay un lugar para ti<i>✦</i>Domingos 7:00 y 10:30 am<i>✦</i></span><span>Ven como estás<i>✦</i>Hay un lugar para ti<i>✦</i>Domingos 7:00 y 10:30 am<i>✦</i></span><span>Ven como estás<i>✦</i>Hay un lugar para ti<i>✦</i>Domingos 7:00 y 10:30 am<i>✦</i></span><span>Ven como estás<i>✦</i>Hay un lugar para ti<i>✦</i>Domingos 7:00 y 10:30 am<i>✦</i></span>
+</div></div>
 
 <section class="blk pm" id="primera-vez">
   <div class="wrap">
     <div class="rv">
       <h2 class="big">¿Primera <em>vez</em>?</h2>
       <ol class="steps">
-        <li><span>Llega 10 minutos antes y te recibimos en la puerta.</span></li>
-        <li><span>Ven como te sientas cómodo: aquí lo importante eres tú.</span></li>
-        <li><span>Ministerio de niños disponible <i>(por confirmar)</i>.</span></li>
+        <li><span><b>Llega 10 minutos antes</b>Te recibimos en la puerta con una sonrisa.</span></li>
+        <li><span><b>Ven como estés</b>Aquí lo importante eres tú, no la ropa.</span></li>
+        <li><span><b>Trae a los niños</b>Ministerio de niños disponible <i>(por confirmar)</i>.</span></li>
       </ol>
+      <figure class="polaroid"><img src="assets/fotos/adoracion-mayor.jpg" alt="Hermanos adorando en el culto" loading="lazy" width="2048" height="1365"><figcaption>¡Te esperamos!</figcaption></figure>
     </div>
     <div class="rv">
       <h2 class="big">Material <em>de estudio</em></h2>
@@ -204,6 +210,29 @@
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
     els.forEach(function(e){io.observe(e)});
   } else { els.forEach(function(e){e.classList.add('in')}); }
+
+  /* Próxima reunión (hora de El Salvador) */
+  (function(){
+    var M=[[0,7,0],[0,10,30],[2,18,0],[3,18,0],[6,16,0]],
+        N=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],
+        W={0:'Culto dominical',2:'Oración y estudio',3:'Estudio bíblico',6:'Culto de jóvenes'};
+    function fmt(h,m){return (h%12||12)+':'+(m<10?'0':'')+m+(h<12?' am':' pm')}
+    var d; try{ d=new Date(new Date().toLocaleString('en-US',{timeZone:'America/El_Salvador'})) }catch(e){ d=new Date() }
+    var now=d.getDay()*1440+d.getHours()*60+d.getMinutes(), best=null, bd=1e9;
+    M.forEach(function(m){var diff=(m[0]*1440+m[1]*60+m[2]-now+10080)%10080; if(diff<bd){bd=diff;best=m}});
+    var off=(best[0]-d.getDay()+7)%7, when=(off===0&&bd<1440)?'hoy':(off===1?'mañana':'el '+N[best[0]]);
+    var t=document.getElementById('next-at');
+    if(t) t.textContent='Próxima reunión: '+when+' · '+W[best[0]]+' · '+fmt(best[1],best[2]);
+    var r=document.querySelector('#sched [data-day="'+best[0]+'"]'); if(r) r.classList.add('next');
+
+    /* Cuenta regresiva del campamento (13 de noviembre de 2026) */
+    var cEl=document.getElementById('count');
+    if(cEl){
+      var today=new Date(d.getFullYear(),d.getMonth(),d.getDate()), ev=new Date(2026,10,13),
+          days=Math.round((ev-today)/86400000);
+      if(days>0){ cEl.hidden=false; cEl.querySelector('b').textContent=days; cEl.querySelector('span').textContent=days===1?'día':'días'; cEl.querySelector('small').textContent=days===1?'Falta':'Faltan'; }
+    }
+  })();
 })();
 </script>
 <script src="js/common.js"></script>
