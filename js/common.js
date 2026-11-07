@@ -2,7 +2,7 @@
 (function () {
   var VERSIONS = [
     ['vibrante', '1', 'Vibrante'],
-    ['calida', '2', 'Cálida'],
+    ['bento', '2', 'Bento'],
     ['series', '3', 'Series']
   ];
   var cur = document.body.dataset.version;
