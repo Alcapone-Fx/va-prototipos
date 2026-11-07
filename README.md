@@ -7,6 +7,7 @@ Tres versiones de la página de inicio para elegir dirección de diseño. HTML/C
 | 1 Atrevido | `home-atrevido.html` | Tipográfico: letras enormes, bloques de color plano, fotos inclinadas y cinta en movimiento |
 | 2 Editorial | `home-editorial.html` | Luminoso y fotográfico: fondo claro, fotos a sangre, titulares serif, una idea por pantalla |
 | 3 Series | `home-series.html` | Contenido por series, material descargable y agenda, con tono de atardecer |
+| 4 Mosaico | `home-mosaico.html` | Cuadrícula de fotos y datos, cálida y clara, centrada en la comunidad |
 
 - **Cambiar de versión:** botones "Diseño 1 · 2 · 3" abajo al centro (o teclas 1, 2, 3).
 - **Opinar:** desactivado por ahora (el código sigue en `js/feedback.js`; se reactiva añadiendo los dos `<script>` al final de cada página).
