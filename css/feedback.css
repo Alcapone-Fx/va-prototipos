@@ -1,0 +1,22 @@
+.fb-fab{position:fixed;right:14px;bottom:14px;z-index:95;display:flex;align-items:center;gap:.5rem;min-height:52px;padding:.7rem 1.1rem;border:0;border-radius:999px;background:#FFC83D;color:#2a0f55;font:700 .95rem 'Montserrat',sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.35);cursor:pointer}
+.fb-fab:hover{transform:translateY(-2px)}
+.fb-fab:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.fb-panel{position:fixed;right:14px;bottom:78px;z-index:96;width:min(380px,calc(100vw - 28px));max-height:calc(100vh - 100px);overflow:auto;background:#fff;color:#1c1230;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.45);padding:1.1rem;font-family:'Montserrat',sans-serif;font-size:15px;line-height:1.45}
+.fb-panel[hidden]{display:none}
+.fb-head{display:flex;justify-content:space-between;align-items:center;font-size:1.1rem}
+.fb-x{border:0;background:#f0e9fa;border-radius:50%;width:34px;height:34px;font-size:1.3rem;cursor:pointer;color:#4E1D92}
+.fb-hint{color:#5d4a7a;margin:.3rem 0 .8rem}
+.fb-types{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:.8rem}
+.fb-types label{position:relative}
+.fb-types input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.fb-types span{display:block;text-align:center;padding:.55rem .2rem;border-radius:12px;border:2px solid #e2d6f3;font-weight:600;font-size:.82rem}
+.fb-types input:checked+span{background:#4E1D92;border-color:#4E1D92;color:#fff}
+.fb-types input:focus-visible+span{outline:3px solid #FFC83D;outline-offset:2px}
+.fb-l{display:block;font-weight:600;margin-bottom:.7rem;font-size:.9rem}
+.fb-l textarea,.fb-l input{display:block;width:100%;margin-top:.3rem;padding:.65rem .75rem;border:2px solid #e2d6f3;border-radius:12px;font:inherit;font-weight:400;color:inherit}
+.fb-l textarea:focus,.fb-l input:focus{border-color:#70279A;outline:0}
+.fb-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.fb-send{width:100%;min-height:48px;border:0;border-radius:999px;background:#4E1D92;color:#fff;font:700 1rem 'Montserrat',sans-serif;cursor:pointer}
+.fb-send:disabled{opacity:.6;cursor:wait}
+.fb-status{min-height:1.3em;margin:.6rem 0 0;color:#4E1D92;font-weight:600}
+@media(max-width:640px){.fb-fab span{display:none}.fb-fab{padding:.7rem;width:52px;justify-content:center}.fb-panel{bottom:76px}}
