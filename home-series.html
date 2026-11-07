@@ -101,28 +101,43 @@
 
 <section class="sec light" id="domingo">
   <div class="container">
-    <div class="sun">
-      <div class="rv">
-        <span class="eyebrow" data-en="This Sunday">Este domingo</span>
-        <p class="big">7:00 y 10:30 am</p>
-        <address>29 Av. Nte. #1215, Col. Buenos Aires II,<br>San Salvador · 2235 9566</address>
-        <div class="btns"><a class="btn btn-pur" href="https://www.google.com/maps/search/?api=1&amp;query=29+Av+Nte+1215+San+Salvador" target="_blank" rel="noopener" data-en="How to get here">Cómo llegar</a><a class="btn btn-out" href="#">WhatsApp</a></div>
+    <div class="sh rv"><div><span class="eyebrow" data-en="Schedule">Horarios</span><h2 class="h2">Hay una reunión esperándote</h2></div></div>
+    <div class="week">
+      <div class="nextup rv">
+        <div>
+          <p class="live-pill"><i aria-hidden="true"></i><span id="next-txt">Próxima reunión: domingo · 7:00 am</span></p>
+        </div>
+        <div>
+          <p class="cada">Cada domingo</p>
+          <div class="times"><div>7:00<small>am</small></div><div>10:30<small>am</small></div></div>
+          <p class="addr">29 Av. Nte. #1215, Col. Buenos Aires II, San Salvador · 2235&nbsp;9566</p>
+          <div class="btns"><a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=29+Av+Nte+1215+San+Salvador" target="_blank" rel="noopener" data-en="How to get here">Cómo llegar</a><a class="btn btn-out" href="#">WhatsApp</a></div>
+        </div>
       </div>
       <div class="rv">
-        <ul class="sched">
-          <li><b>Domingo</b><span>Culto dominical</span><span>7:00 · 10:30 am</span></li>
-          <li><b>Martes</b><span>Oración y estudio</span><span>6:00 pm</span></li>
-          <li><b>Miércoles</b><span>Estudio bíblico</span><span>6:00 pm</span></li>
-          <li><b>Sábado</b><span>Culto de jóvenes</span><span>4:00 pm</span></li>
+        <ul class="days" id="days">
+          <li data-day="0"><span class="chip">Dom</span><span class="what"><b>Culto dominical</b><small>Toda la familia</small></span><span class="when">7:00 · 10:30 am</span></li>
+          <li data-day="2"><span class="chip">Mar</span><span class="what"><b>Oración y estudio</b><small>Entre semana</small></span><span class="when">6:00 pm</span></li>
+          <li data-day="3"><span class="chip">Mié</span><span class="what"><b>Estudio bíblico</b><small>Cristología</small></span><span class="when">6:00 pm</span></li>
+          <li data-day="6"><span class="chip">Sáb</span><span class="what"><b>Culto de jóvenes</b><small>Worship juvenil</small></span><span class="when">4:00 pm</span></li>
         </ul>
         <p class="note">Horarios provisionales, por confirmar.</p>
       </div>
     </div>
-    <ol class="steps rv">
-      <li>Llega 10 minutos antes y te recibimos en la puerta.</li>
-      <li>Ven como te sientas cómodo: aquí lo importante eres tú.</li>
-      <li>Ministerio de niños disponible <i>(por confirmar)</i>.</li>
-    </ol>
+
+    <div class="first rv">
+      <div class="fp"><img src="assets/fotos/tarima-oracion.jpg" alt="Equipo orando junto en la tarima" loading="lazy" width="2048" height="1365"></div>
+      <div class="ft">
+        <span class="eyebrow" data-en="First time?">¿Primera vez?</span>
+        <h3>Así es tu primer domingo</h3>
+        <ol class="steps">
+          <li><b>Llega 10 minutos antes</b><span>Te recibimos en la puerta con una sonrisa.</span></li>
+          <li><b>Ven como estés</b><span>Aquí lo importante eres tú, no la ropa.</span></li>
+          <li><b>Trae a los niños</b><span>Ministerio de niños disponible <i>(por confirmar)</i>.</span></li>
+        </ol>
+        <a class="btn btn-pur" href="#visitanos">Avísanos que vienes</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -148,7 +163,7 @@
     <div class="sh rv"><div><span class="eyebrow">Mensajes</span><h2 class="h2" data-en="Message series">Series de mensajes</h2></div><a class="more" href="#">Ver todas →</a></div>
     <div class="rail rv" tabindex="0" aria-label="Series de mensajes">
       <a class="sr" href="#"><div class="cover"><img src="assets/fotos/serie-ultimos-dias.jpg" alt="" loading="lazy" width="640" height="992"></div><h3>Viviendo en los últimos días</h3><span>Serie actual · Domingos</span></a>
-      <a class="sr" href="#"><div class="cover type" style="--c1:#4E1D92;--c2:#1b0a3a"><small>Estudio bíblico</small><b>Cristo<br>logía</b></div><h3>Cristología</h3><span>Miércoles · 6:00 pm</span></a>
+      <a class="sr" href="#"><div class="cover type" style="--c1:#4E1D92;--c2:#1b0a3a"><small>Estudio bíblico</small><b>Cristología</b></div><h3>Cristología</h3><span>Miércoles · 6:00 pm</span></a>
       <a class="sr" href="#"><div class="cover"><img src="assets/fotos/camp.jpg" alt="" loading="lazy" width="704" height="880"></div><h3>Código Santo</h3><span>Campamento · 13–15 nov</span></a>
       <a class="sr" href="#"><div class="cover type" style="--c1:#9534A7;--c2:#3a0f5c"><small>Radio</small><b>Desafío para la vida</b></div><h3>Desafío para la Vida</h3><span>435 episodios · L–V 6:15 am</span></a>
       <a class="sr" href="#"><div class="cover type" style="--c1:#c9871a;--c2:#5a2b00"><small>Intercesión</small><b>Semana misionera</b></div><h3>Intercesión Misionera</h3><span>2 al 6 de noviembre</span></a>
@@ -168,17 +183,33 @@
 </section>
 
 <section class="sec alt" id="eventos">
-  <div class="container ev">
-    <a class="poster rv" href="#" aria-label="Código Santo Camp 2026"><img src="assets/fotos/camp.jpg" alt="Afiche del Código Santo Camp 2026" loading="lazy" width="704" height="880"></a>
-    <div class="rv">
-      <span class="eyebrow" data-en="Events">Eventos</span>
-      <h2 class="h2">Lo que viene</h2>
-      <ul class="agenda">
-        <li><div class="date"><b>13</b><span>Nov</span></div><div><h3>Código Santo Camp 2026</h3><div class="facts"><span>13 al 15 de noviembre</span><span>Palabra de Vida (Cangrejera)</span><span>$50 sin camiseta · $56 con camiseta</span></div><a class="btn btn-gold" href="#">Reserva tu cupo con $20</a></div></li>
-        <li><div class="date"><b>Mié</b><span>6 pm</span></div><div><h3>Estudio bíblico de Cristología</h3><p>Todos los miércoles.</p></div></li>
-        <li><div class="date"><b>Dom</b><span>7 · 10:30</span></div><div><h3>Serie “Viviendo en los últimos días”</h3><p>Culto dominical, 7:00 y 10:30 am.</p></div></li>
-        <li><div class="date"><b>L–V</b><span>6:15 am</span></div><div><h3>Desafío para la Vida</h3><p>Programa radial diario.</p></div></li>
-      </ul>
+  <div class="container">
+    <div class="sh rv"><div><span class="eyebrow" data-en="Events">Eventos</span><h2 class="h2">Lo que viene</h2></div></div>
+    <div class="ev">
+      <a class="poster rv" href="#" aria-label="Código Santo Camp 2026"><img src="assets/fotos/camp.jpg" alt="Afiche del Código Santo Camp 2026" loading="lazy" width="704" height="880"></a>
+      <div class="rv">
+        <article class="ticket">
+          <div class="stub"><small>Nov</small><b>13</b><span>al 15</span></div>
+          <div class="tk">
+            <span class="eyebrow">Campamento juvenil</span>
+            <h3>Código Santo Camp 2026</h3>
+            <p class="where">Palabra de Vida · Cangrejera</p>
+            <div class="prices">
+              <div><b>$50</b><span>sin camiseta</span></div>
+              <div><b>$56</b><span>con camiseta</span></div>
+            </div>
+            <p class="inc">Incluye alimentación, coffee breaks, instalaciones y transporte.</p>
+            <a class="btn btn-gold" href="#">Reserva tu cupo con $20</a>
+            <p class="fine">La reserva no es reembolsable. Cupos limitados.</p>
+          </div>
+        </article>
+        <h3 class="mini-h">Cada semana</h3>
+        <div class="weekly">
+          <div><span>Mié · 6 pm</span><b>Estudio bíblico de Cristología</b></div>
+          <div><span>Dom · 7:00 y 10:30</span><b>Serie “Viviendo en los últimos días”</b></div>
+          <div><span>L–V · 6:15 am</span><b>Desafío para la Vida, programa radial</b></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -186,13 +217,24 @@
 <section class="sec" id="ministerios">
   <div class="container">
     <div class="sh rv"><div><span class="eyebrow" data-en="Ministries">Ministerios</span><h2 class="h2">Un lugar para cada etapa</h2></div></div>
-    <div class="min rv">
-      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg><h3>Niños</h3><p>Los pequeños también adoran.</p></a>
-      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3>Jóvenes</h3><p>Worship juvenil · sábados 4:00 pm.</p></a>
-      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></svg><h3>Mujeres</h3><p>Discipulado de mujeres.</p></a>
-      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><h3>Hombres</h3><p>Discipulado de hombres.</p></a>
-      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15M5 19l8-8"/></svg><h3>Grupos Pámpano</h3><p>Crece en comunidad.</p></a>
-      <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/></svg><h3>Intercesión</h3><p>Oramos por ti.</p></a>
+    <div class="mnl rv">
+      <ul class="mlist" id="mlist">
+        <li><a href="#" data-k="0" class="on"><span class="n">01</span><span><h3>Niños</h3><p>Los pequeños también adoran.</p></span><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-k="1"><span class="n">02</span><span><h3>Jóvenes</h3><p>Worship juvenil · sábados 4:00 pm.</p></span><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-k="2"><span class="n">03</span><span><h3>Mujeres</h3><p>Discipulado de mujeres.</p></span><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-k="3"><span class="n">04</span><span><h3>Hombres</h3><p>Discipulado de hombres.</p></span><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-k="4"><span class="n">05</span><span><h3>Grupos Pámpano</h3><p>Crece en comunidad.</p></span><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-k="5"><span class="n">06</span><span><h3>Intercesión</h3><p>Oramos por ti.</p></span><span class="go" aria-hidden="true">→</span></a></li>
+      </ul>
+      <div class="pv" aria-hidden="true">
+        <div class="pvi type on" data-k="0" style="--c1:#4E1D92;--c2:#1b0a3a"><b>Niños</b></div>
+        <div class="pvi" data-k="1"><img src="assets/fotos/congregacion.jpg" alt="" loading="lazy" width="2048" height="1365"></div>
+        <div class="pvi" data-k="2"><img src="assets/fotos/mujeres-oracion.jpg" alt="" loading="lazy" width="2048" height="1365"></div>
+        <div class="pvi type" data-k="3" style="--c1:#9534A7;--c2:#3a0f5c"><b>Hombres</b></div>
+        <div class="pvi" data-k="4"><img src="assets/fotos/adoracion-mayor.jpg" alt="" loading="lazy" width="2048" height="1365"></div>
+        <div class="pvi" data-k="5"><img src="assets/fotos/tarima-oracion.jpg" alt="" loading="lazy" width="2048" height="1365"></div>
+        <span class="cap">Fotos de ejemplo</span>
+      </div>
     </div>
   </div>
 </section>
@@ -214,8 +256,8 @@
       <iframe class="rv" title="Mapa de la iglesia" loading="lazy" src="https://maps.google.com/maps?q=29+Av+Nte+1215+San+Salvador+El+Salvador&amp;output=embed"></iframe>
     </div>
     <div class="give rv">
-      <div><span class="eyebrow">Ofrendas</span><h3>Siembra en la obra</h3><p>Transferencia bancaria. Banco y cuenta: <i>por confirmar</i>.</p><a class="btn btn-gold" href="#">Ver datos de la cuenta</a></div>
-      <div><span class="eyebrow">Oración</span><h3>Pide oración</h3><p>Tu petición llega al grupo de intercesión y es privada.</p><a class="btn btn-out" href="#">Enviar petición</a></div>
+      <div class="g1"><span class="eyebrow">Ofrendas</span><h3>Siembra en la obra</h3><p>Transferencia bancaria. Banco y cuenta: <i>por confirmar</i>.</p><a class="btn btn-gold" href="#">Ver datos de la cuenta</a></div>
+      <div class="g2"><span class="eyebrow">Oración</span><h3>Pide oración</h3><p>Tu petición llega al grupo de intercesión y es privada.</p><a class="btn btn-out" href="#">Enviar petición</a></div>
     </div>
   </div>
 </section>
@@ -276,6 +318,30 @@
   stage.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)go(i+(dx<0?1:-1));x0=null});
   if(paused){pauseBtn.textContent='▶';pauseBtn.setAttribute('aria-pressed','true');stage.classList.add('paused')}
   go(0);
+
+  /* Próxima reunión (hora de El Salvador) */
+  (function(){
+    var M=[[0,7,0],[0,10,30],[2,18,0],[3,18,0],[6,16,0]],
+        N=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],
+        W={0:'Culto dominical',2:'Oración y estudio',3:'Estudio bíblico',6:'Culto de jóvenes'};
+    function fmt(h,m){return (h%12||12)+':'+(m<10?'0':'')+m+(h<12?' am':' pm')}
+    var d; try{ d=new Date(new Date().toLocaleString('en-US',{timeZone:'America/El_Salvador'})) }catch(e){ d=new Date() }
+    var now=d.getDay()*1440+d.getHours()*60+d.getMinutes(), best=null, bd=1e9;
+    M.forEach(function(m){var diff=(m[0]*1440+m[1]*60+m[2]-now+10080)%10080; if(diff<bd){bd=diff;best=m}});
+    var off=(best[0]-d.getDay()+7)%7, when=(off===0&&bd<1440)?'hoy':(off===1?'mañana':'el '+N[best[0]]);
+    if(bd>=1440&&off===0) when='el '+N[best[0]];
+    var t=document.getElementById('next-txt');
+    if(t) t.textContent='Próxima reunión: '+when+' · '+W[best[0]]+' · '+fmt(best[1],best[2]);
+    var li=document.querySelector('#days [data-day="'+best[0]+'"]');
+    if(li) li.classList.add('next');
+  })();
+
+  /* Ministerios: vista previa al pasar el cursor */
+  (function(){
+    var links=[].slice.call(document.querySelectorAll('#mlist a')), items=[].slice.call(document.querySelectorAll('.pvi'));
+    function on(k){links.forEach(function(a){a.classList.toggle('on',a.dataset.k===k)});items.forEach(function(p){p.classList.toggle('on',p.dataset.k===k)})}
+    links.forEach(function(a){a.addEventListener('mouseenter',function(){on(a.dataset.k)});a.addEventListener('focus',function(){on(a.dataset.k)})});
+  })();
 })();
 </script>
 <script src="js/common.js"></script>
