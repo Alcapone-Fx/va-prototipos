@@ -34,20 +34,24 @@
 
 <main id="contenido">
 <section class="hero" aria-label="Bienvenida">
+  <div class="herobg" aria-hidden="true"></div><div class="shade" aria-hidden="true"></div>
   <div class="container slides">
-    <div class="slide on" data-i="0">
+    <div class="slide on" data-i="0" data-bg="assets/fotos/congregacion.jpg">
       <span class="kicker" data-en="Welcome">Bienvenido</span>
       <h1><span data-en="Reflecting">Reflejando</span> <em data-en="His Glory">Su Gloria</em></h1>
       <p data-en="Joy. Worship. Fellowship. A church where you can grow and find your family.">Alegría. Adoración. Compañerismo. Una iglesia donde puedes crecer y encontrar tu familia.</p>
       <div class="cta"><a class="btn btn-gold" href="#horarios" data-en="Plan your visit">Planifica tu visita</a><a class="btn btn-ghost" href="#predicas" data-en="Watch a message">Ver un mensaje</a></div>
     </div>
-    <div class="slide" data-i="1">
-      <span class="kicker">13 – 15 nov</span>
-      <h1>Código <em>Santo</em> Camp 2026</h1>
-      <p>Tres días para encender tu fe. Hospedaje, alimentación y transporte incluidos. Desde $50.</p>
-      <div class="cta"><a class="btn btn-gold" href="#eventos">Ver detalles</a><a class="btn btn-ghost" href="#visitanos">Reservar</a></div>
+    <div class="slide has-poster" data-i="1" data-bg="assets/fotos/pastor.jpg">
+      <div class="txt">
+        <span class="kicker">13 – 15 nov · Palabra de Vida</span>
+        <h1>Código <em>Santo</em> Camp 2026</h1>
+        <p>Campamento juvenil de tres días. Incluye alimentación, coffee breaks, uso de instalaciones y transporte. Reserva tu cupo con $20.</p>
+        <div class="cta"><a class="btn btn-gold" href="#eventos">Ver detalles</a><a class="btn btn-ghost" href="#visitanos">Reservar</a></div>
+      </div>
+      <img class="poster" src="assets/fotos/camp.jpg" alt="Afiche del Código Santo Camp 2026" width="1280" height="1600">
     </div>
-    <div class="slide" data-i="2">
+    <div class="slide" data-i="2" data-bg="assets/fotos/tarima-oracion.jpg">
       <span class="kicker">Lunes a viernes · 6:15 am</span>
       <h1>Desafío para <em>la Vida</em></h1>
       <p>Nuestro programa radial diario. Un mensaje corto para empezar tu día con propósito.</p>
@@ -95,9 +99,9 @@
   <div class="container">
     <h2><span data-en="Events">Eventos</span> y actividades</h2>
     <div class="events">
-      <article class="ev"><div class="art a1">Código Santo<br>Camp 2026</div><div class="body"><div class="when">13 – 15 noviembre</div><h3>Camp de jóvenes</h3><p>Hospedaje, alimentación y transporte. $50 / $56. Cupos limitados.</p></div></article>
-      <article class="ev"><div class="art a2">Estudio bíblico<br>de Cristología</div><div class="body"><div class="when">Miércoles · 6:00 pm</div><h3>La humanidad de Cristo</h3><p>Serie de estudio semanal para toda la congregación.</p></div></article>
-      <article class="ev"><div class="art a3">Visión espiritual</div><div class="body"><div class="when">Próximamente</div><h3>Cómo liderar con energía</h3><p>Taller para líderes y servidores de todos los ministerios.</p></div></article>
+      <article class="ev"><img class="art" src="assets/fotos/camp.jpg" alt="Afiche Código Santo Camp 2026" loading="lazy" width="640" height="800"><div class="body"><div class="when">13 – 15 noviembre</div><h3>Campamento juvenil</h3><p>$50 sin camiseta / $56 con camiseta. Cupos limitados.</p></div></article>
+      <article class="ev"><img class="art" src="assets/fotos/cristologia.jpg" alt="Afiche Estudio bíblico de Cristología" loading="lazy" width="640" height="800"><div class="body"><div class="when">Miércoles · 6:00 pm</div><h3>Estudio de Cristología</h3><p>Estudio semanal para toda la congregación.</p></div></article>
+      <article class="ev"><img class="art" src="assets/fotos/serie-ultimos-dias.jpg" alt="Afiche de la serie Viviendo en los últimos días" loading="lazy" width="640" height="800"><div class="body"><div class="when">Domingo 8 nov · 7:00 y 10:30 am</div><h3>Señales que no ignorar</h3><p>Serie “Viviendo en los últimos días”.</p></div></article>
     </div>
   </div>
 </section>
@@ -163,9 +167,9 @@
 (function(){
   var hd=document.querySelector('.hd');
   function sc(){hd.classList.toggle('scrolled',scrollY>30)} sc(); addEventListener('scroll',sc,{passive:true});
-  var slides=[].slice.call(document.querySelectorAll('.slide')),dots=document.querySelector('.dots'),i=0,timer,paused=false;
+  var bg=document.querySelector('.herobg'),slides=[].slice.call(document.querySelectorAll('.slide')),dots=document.querySelector('.dots'),i=0,timer,paused=false;
   slides.forEach(function(_,n){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir a la diapositiva '+(n+1));b.onclick=function(){go(n)};dots.appendChild(b)});
-  function go(n){i=(n+slides.length)%slides.length;slides.forEach(function(s,k){s.classList.toggle('on',k===i)});[].forEach.call(dots.children,function(d,k){d.setAttribute('aria-current',k===i)})}
+  function go(n){i=(n+slides.length)%slides.length;slides.forEach(function(s,k){s.classList.toggle('on',k===i)});bg.style.backgroundImage='url('+slides[i].dataset.bg+')';[].forEach.call(dots.children,function(d,k){d.setAttribute('aria-current',k===i)})}
   function run(){clearInterval(timer);if(!paused&&!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(function(){go(i+1)},7000)}
   document.querySelector('[data-prev]').onclick=function(){go(i-1);run()};
   document.querySelector('[data-next]').onclick=function(){go(i+1);run()};

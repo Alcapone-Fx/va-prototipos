@@ -17,7 +17,11 @@ body{background:#14082b;color:#fff}
 .hero::before{background:#B13CAE;left:-20vmax;bottom:-30vmax}
 .hero::after{background:#612499;right:-25vmax;top:-30vmax;animation-delay:-9s}
 @keyframes drift{to{transform:translate(8vmax,-6vmax) scale(1.12)}}
+.herobg{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.55;mix-blend-mode:luminosity;transition:background-image .6s}
+.shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(42,15,85,.92) 0,rgba(42,15,85,.62) 55%,rgba(78,29,146,.3))}
 .slides{position:relative;z-index:2;padding:110px 0 70px}
+.slide.has-poster.on{display:grid;grid-template-columns:1.15fr .6fr;gap:2.5rem;align-items:center;max-width:none}
+.slide .poster{width:100%;max-height:64vh;object-fit:contain;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.55);justify-self:center}
 .slide{display:none;max-width:760px;animation:rise .7s ease both}
 .slide.on{display:block}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}}
@@ -55,7 +59,7 @@ section.sec{padding:5.5rem 0 1rem}
 /* Eventos */
 .events{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem}
 .ev{border-radius:22px;overflow:hidden;background:#25104a;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column}
-.ev .art{aspect-ratio:16/10;display:grid;align-content:end;padding:1.1rem;font-weight:800;font-size:1.35rem;line-height:1.1}
+.ev .art{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;display:block}
 .ev .art.a1{background:linear-gradient(160deg,#1a0f2e 10%,#a2381d 60%,#f2a33a)}
 .ev .art.a2{background:linear-gradient(160deg,#0f1d4a,#2f4aa8 70%,#7aa2ff)}
 .ev .art.a3{background:linear-gradient(160deg,#2a0f55,#9534A7 70%,#ff9de1)}
@@ -66,7 +70,7 @@ section.sec{padding:5.5rem 0 1rem}
 
 /* Prédicas */
 .pred{display:grid;grid-template-columns:1.4fr 1fr;gap:1.3rem;margin-top:2rem}
-.big{position:relative;border-radius:24px;overflow:hidden;min-height:340px;background:linear-gradient(150deg,#14082b 5%,#8a2f1c 65%,#f2a33a);display:grid;align-content:end;padding:1.6rem;text-decoration:none}
+.big{position:relative;border-radius:24px;overflow:hidden;min-height:380px;background:linear-gradient(180deg,rgba(20,8,43,.1) 20%,rgba(20,8,43,.92)),url(../assets/fotos/pastor.jpg) center/cover;display:grid;align-content:end;padding:1.6rem;text-decoration:none}
 .big .play{position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;background:var(--gold);color:#2a0f55;display:grid;place-items:center;font-size:2rem;box-shadow:0 0 0 14px rgba(255,200,61,.22)}
 .big h3{font-size:1.7rem;position:relative}
 .list{display:grid;gap:.8rem;align-content:start}
@@ -100,6 +104,7 @@ footer p{opacity:.7;margin:.3rem 0}
   .strip .container{grid-template-columns:1fr}
 }
 @media(max-width:760px){
+  .slide.has-poster.on{display:block}.slide .poster{display:none}
   .nav{position:fixed;inset:74px 0 auto 0;background:rgba(20,8,43,.98);flex-direction:column;align-items:stretch;padding:1rem 1.2rem 1.5rem;gap:.2rem;display:none;box-shadow:0 20px 40px rgba(0,0,0,.5)}
   .nav.open{display:flex}
   .nav a{padding:.9rem .4rem;font-size:1.1rem;border-bottom:1px solid rgba(255,255,255,.1)}
