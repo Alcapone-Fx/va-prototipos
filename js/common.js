@@ -1,7 +1,7 @@
 /* Selector de versión, menú móvil e idioma básico (ES/EN) */
 (function () {
   var VERSIONS = [
-    ['atrevido', '1', 'Atrevido'],
+    ['cartelera', '1', 'Cartelera'],
     ['editorial', '2', 'Editorial'],
     ['series', '3', 'Series']
   ];

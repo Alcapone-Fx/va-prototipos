@@ -4,7 +4,7 @@ Tres versiones de la página de inicio para elegir dirección de diseño. HTML/C
 
 | Versión | Archivo | Idea |
 |---|---|---|
-| 1 Atrevido | `home-atrevido.html` | Tipográfico: letras enormes, bloques de color plano, fotos inclinadas y cinta en movimiento |
+| 1 Cartelera | `home-cartelera.html` | Afiches primero y facilidad de uso: pregunta "¿Qué estás buscando hoy?" con 4 accesos grandes, riel de afiches, semana de horarios, texto ajustable (Aa) |
 | 2 Editorial | `home-editorial.html` | Luminoso y fotográfico: fondo claro, fotos a sangre, titulares serif, una idea por pantalla |
 | 3 Series | `home-series.html` | Escenario oscuro: carrusel a pantalla completa con artes, accesos grandes (Soy nuevo, En vivo, Dar), series como pósters. Inspirada en Elevation, Saddleback y Gateway |
 
